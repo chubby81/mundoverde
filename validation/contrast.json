@@ -1,0 +1,44 @@
+[
+  {
+    "use": "Text",
+    "foreground": "#20382E",
+    "background": "#F5F3EB",
+    "ratio": 11.34,
+    "AA_normal_text": true
+  },
+  {
+    "use": "Sekundärtext",
+    "foreground": "#526458",
+    "background": "#F5F3EB",
+    "ratio": 5.69,
+    "AA_normal_text": true
+  },
+  {
+    "use": "Link / Fokus",
+    "foreground": "#47683F",
+    "background": "#F5F3EB",
+    "ratio": 5.69,
+    "AA_normal_text": true
+  },
+  {
+    "use": "Button",
+    "foreground": "#F5F3EB",
+    "background": "#193E32",
+    "ratio": 10.64,
+    "AA_normal_text": true
+  },
+  {
+    "use": "Text auf Salbei",
+    "foreground": "#20382E",
+    "background": "#DCE6D5",
+    "ratio": 9.79,
+    "AA_normal_text": true
+  },
+  {
+    "use": "Erdton",
+    "foreground": "#77624F",
+    "background": "#F5F3EB",
+    "ratio": 5.19,
+    "AA_normal_text": true
+  }
+]

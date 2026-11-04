@@ -1,33 +1,24 @@
-# mundoverde CI und CD Entwurf 01
+# mundoverde Logo Schriftentwurf 02
 
-Stand 4. November 2026. Logo, Gestaltungsregeln und eine lokale Website-Vorschau für das bestehende GitHub-Pages-Projekt. Kein Hostingwechsel, keine Veröffentlichung.
+Die Wortmarke verwendet jetzt eine ruhigere Serifenschrift auf Basis von DejaVu Serif Book. Die Änderung soll dem Naturmagazin eine wärmere, buchnahe und redaktionelle Anmutung geben. Das ist eine gestalterische Einschätzung, kein durch Nutzertests belegtes Wahrnehmungsergebnis.
 
-## Anschauen
+Das v als Keimling, die beiden Grüntöne, der Name und die grundsätzliche Anordnung bleiben erhalten. Das Symbol ist in der Wortmarke bewusst eine eigene Form und kein getipptes Standard-v. Die Lesetypografie und Bedienoberfläche der Website müssen wegen dieser Logoänderung nicht auf Serifenschrift umgestellt werden.
 
-ZIP entpacken und index.html öffnen. Das ist der Gestaltungsleitfaden mit Varianten und einer Verknüpfung zur Website. Die Website selbst liegt unter website/index.html. brandboard.png zeigt den kompakten Markenüberblick.
+## Ansehen und verwenden
 
-## Inhalt
+- vergleich.png zeigt alte und neue Wortmarke mit gleicher Breite der SVG-Zeichenflächen. Die untere Zusatzansicht zeigt die Negativfassung.
+- assets enthält transparente SVG- und PNG-Dateien in Farbe, einfarbig und weiß. Weiße Logos auf dunklem Grund ansehen.
+- website/assets enthält ausschließlich die drei neuen SVG-Wortmarken mit den bisherigen Dateinamen. Bei späterer Übernahme nur diese Wortmarken im entsprechenden assets-Ordner ersetzen. Keine HTML-, Rechts- oder Beitragsdateien werden überschrieben.
+- reference enthält die alte Wortmarke zum Vergleich.
+- build_logo.py und specification.json dokumentieren den Aufbau. Zum Erzeugen wird Python mit fontTools und DejaVu Serif am angegebenen Systempfad benötigt. PNGs wurden mit Inkscape exportiert.
+- FONT-LICENSE.txt enthält die Lizenzhinweise zur Schriftbasis. Die SVGs bestehen aus Pfaden und laden keine Schriftdatei nach.
 
-- assets: Wortmarke in Farbe, einfarbig und weiß; v-Keimling, vereinfachtes Micro-Zeichen, Favicon; SVG und transparente PNG. Die weißen Varianten sind auf weißem Hintergrund naturgemäß kaum sichtbar.
-- index.html: CI/CD-Leitfaden einschließlich Positionierung, Tonalität, Farben, Typografie, Abständen, Mindestgrößen, Bildsprache und Struktur.
-- website: vollständige lokale Designvorschau, abgeleitet vom ursprünglichen bereitgestellten Paket. Die Rechtstexte und Artikel sind noch Entwürfe.
-- tokens.css: zentrale Farbwerte.
-- validation: technische Befunde und errechnete Kontraste.
-- source: Aufbau der Vektoren und ursprünglicher Website-Stand für Nachvollziehbarkeit.
-- FONT-LICENSE.txt: Lizenzhinweise zur DejaVu-Sans-Basis der Logo-Buchstaben. Es werden keine Fonts ins Web geladen.
+## Ergänzung zum CI/CD Leitfaden 01
 
-Die finale technische Wortmarke wurde als eigenständige Vektorfassung nach dem generierten Bildkonzept aufgebaut, nicht als pixelgenaue Vektorisierung des Konzeptbildes. Die Linienführung und Schrift unterscheiden sich deshalb bewusst. Das Konzeptbild ist kein Logo-Master.
+Die bisherige Logo-Schriftbasis DejaVu Sans wird für die Wortmarke durch DejaVu Serif Book ersetzt. Die feste Vektorform ist der Master. Schutzraum, Farbpalette, Mindestbreiten und Verwendung der separaten Symbole aus dem bisherigen Leitfaden bleiben als Entwurfsregeln bestehen. Minimum für die Wortmarke weiterhin 180 CSS-Pixel; darunter das vorhandene separate v-Zeichen verwenden. Kein Schatten, kein Strecken, keine Kontur ergänzen.
 
-## Später auf die Website übernehmen
+## Geprüft
 
-Die Dateien nicht pauschal über einen möglicherweise inzwischen geänderten Repository-Stand kopieren. Diese Vorschau basiert auf dem ursprünglichen Paket, nicht auf einem erneut heruntergeladenen aktuellen GitHub-Checkout.
+Die neue Fassung wurde als Bild gerendert und gesichtet. SVG-Struktur, vollständig lesbare PNGs und eine kleine Größenübersicht wurden geprüft. Alle drei SVG-Wortmarken verwenden dieselbe Geometrie und benötigen keine externen Ressourcen. Die Farben sind unverändert; die bisherigen Kontrastberechnungen gelten deshalb weiterhin für die gleichen Farbpaare. Die Wortmarke hat annähernd dieselbe Zeichenflächenproportion wie vorher.
 
-Für die gestalterische Übernahme sind style.css, app.js, favicon.svg, assets/ und die angepassten HTML-Kopfbereiche sowie die Startseite relevant. Neue Texte oder in der Zwischenzeit ausgefüllte Betreiberangaben erhalten. Die mitgelieferten impressum.html und datenschutz.html nicht über bereits vervollständigte Rechtstexte laden. Die gesondert vorbereitete Impressumsvorlage ohne Telefonnummer wird durch dieses Designpaket nicht ersetzt.
-
-noindex auf den Magazinseiten bleibt bis zur redaktionellen und rechtlichen Freigabe bestehen. Es ist keine Zugangssperre. Die neue Gestaltung macht die Website nicht automatisch rechtlich veröffentlichungsfertig.
-
-## Validierung verstehen
-
-Die konkreten Ergebnisse stehen in validation/PRUEFPROTOKOLL.md. Rechnerische Kontraste, statische Prüfungen und beobachtetes Browser-Verhalten sind getrennt von subjektiven Gestaltungsentscheidungen dokumentiert. Keine Markenfreigabe, keine vollständige WCAG-Zertifizierung und kein Druck-Andruck.
-
-Für Reproduktion des Generierungsschritts: Python mit fontTools, DejaVu Sans unter dem im Skript angegebenen Systempfad und source/build_brand.py verwenden. Das Skript erzeugt SVGs, Kontrastdaten und die Website aus source/original-site. Der Leitfaden ist eigenständig gepflegtes HTML; PNG-Ausgaben wurden mit Inkscape erstellt.
+Das ist keine neue vollständige Prüfung der Website, keine Markenfreigabe und kein Andruck. Es wurde keine Live-Änderung durchgeführt.
